@@ -1,0 +1,1 @@
+gci c:\temp | ? {$_ -is [System.IO.FileInfo]} | select @{Label="Name"; Expression="BaseName"},LastWriteTime,Length | Export-Csv filelist_temp.csv
